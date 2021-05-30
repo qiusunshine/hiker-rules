@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Document</title>
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.css' />
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css' />
+    <style type="text/css">
+        /* 显示元素设定 */
+        .slider {
+            position: absolute;
+            left: 2%;
+            width: 96%;
+            height: 160px;
+            border-radius: 18px;
+            box-shadow: 0 20px 22px -25px black;
+        }
+
+        .slider-track {
+            -webkit-transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+            transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+        }
+
+        .pic {
+            overflow: hidden;
+            height: 160px;
+            border-radius: 18px; /* 设定圆角大小 */
+            position: relative;
+            z-index: 1;
+        }
+
+        .pic img {
+            width: 100%;
+            height: 100%;
+            -webkit-transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+            transition: all 1s cubic-bezier(0.7, 0, 0.3, 1);
+            -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+        }
+
+        .pic.slick-active img {
+            -webkit-transform: scale(1);
+            transform: scale(1);
+        }
+    </style>
+
+    <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+    <script type="text/javascript">
+        const SOGOU_URL = 'https://v.sogou.com/channel/movie';
+        const HAIKUO_OPEN_URL = 'web://';
+        const HAIKUO_SEARCH_URL = 'hiker://search?s=';
+        const MAX_SLIDER_SIZE = 8; // 最大图片显示张数
+        const TRANSITION_SPEED = 1000; // 图片切换动画时长
+        const PLAY_SPEED = 3000; // 播放速度
+        const PRESS_EVENT_TIMER = 1000; // 长按事件毫秒数
+        const CACHE_TIMEOUT = 60 * 60 * 1000; // 缓存超时时间
+
+        let timeOutEvent = 0;
+
+        // 点击
+        let imgClick = (title) => {
+            location.href = HAIKUO_SEARCH_URL + title;
+        };
+
+        // 长按
+        let imgTouch = (url) => {
+         //   location.href = HAIKUO_OPEN_URL + url;
+        };
+
+        let getCache = () => {
+            let cache = localStorage.getItem("SOGOU_CACHE")
+            return cache ? JSON.parse(cache) : null;
+        };
+
+        let readFromSogou = (callback) => {
+            $.get(SOGOU_URL)
+                .done(function (data) {
+                    let sliderData;
+                    try {
+                        let sougoudata = $(data.substring(data.indexOf('<script>window.__INITIAL_STATE__=')))[0].innerHTML;
+                        sougoudata = sougoudata.replace("window.__INITIAL_STATE__=", "").replace(';(function(){var s;(s=document.currentScript||document.scripts[document.scripts.length-1]).parentNode.removeChild(s);}());', '');
+                        let sougouobj = JSON.parse(sougoudata);
+                        sliderData = sougouobj.channelMovie.itemData.scrollBox;
+                    } catch (e) {
+                        console.log(e);
+                    }
+
+                    if (!sliderData)
+                        callback();
+
+                    let cache = { time: new Date().getTime(), data: sliderData };
+                    localStorage.setItem('SOGOU_CACHE', JSON.stringify(cache));
+                    callback();
+                })
+                .fail(function () {
+                    callback();
+                });
+        };
+
+        let getSogouData = (processDataCallback) => {
+            let cache = getCache();
+            let now = new Date().getTime();
+            let doCallback = () => {
+                cache = getCache();
+                processDataCallback(cache ? cache.data : null);
+            };
+
+            if (!cache || now > cache.time + CACHE_TIMEOUT) {
+                readFromSogou(() => {
+                    doCallback()
+                });
+            } else {
+                doCallback();
+            }
+        };
+
+        let processData = (data) => {
+            if (!data) {
+                $('.slider').html('出錯啦！');
+                return;
+            }
+
+            for (let i = 0; i < MAX_SLIDER_SIZE && data.length > i; i++) {
+                let image = $('<img>').attr('src', data[i].big_pic);
+                let imgdiv = $('<div>').addClass('pic').append(image);
+                $('.slider').append(imgdiv);
+
+                image.on('touchstart', (target) => {
+                    timeOutEvent = setTimeout(() => {
+                        timeOutEvent = 0;
+                        // 长按事件
+                        imgTouch(data[i].playurl);
+                    }, PRESS_EVENT_TIMER);
+                });
+
+                image.on('touchmove', () => {
+                    clearTimeout(timeOutEvent);
+                    timeOutEvent = 0;
+                });
+
+                image.on('touchend', (target) => {
+                    clearTimeout(timeOutEvent);
+                    if (timeOutEvent != 0) {
+                        // 点击事件
+                        imgClick(data[i].title);
+                    }
+                });
+            }
+
+            $('.slider').slick({
+                cssEase: 'linear',
+                autoplaySpeed: PLAY_SPEED,
+                speed: TRANSITION_SPEED,
+                cssEase: 'cubic-bezier(0.25,0.1,0.25,1)',
+                centerPadding: '100',
+                centerMode: true,
+                draggable: true,
+                autoplay: true,
+                arrows: false,
+                dots: true,
+                fade: true,
+                infinite: true,
+                slidesToScroll: 1,
+                pauseOnFocus: false,
+                pauseOnHover: false,
+                pauseOnDotsHover: false
+            })
+
+        };
+
+        $(document).ready(function () {
+            getSogouData((data) => processData(data));
+        });
+    </script>
+</head>
+<body>
+    <div class="slider"></div>
+</body>
+</html>

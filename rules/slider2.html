@@ -1,0 +1,247 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>Document</title>
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.css' />
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css' />
+    <style type="text/css">
+        /* 显示元素设定 */
+        .slider {
+            position: absolute;
+            left: 2%;
+            width: 96%;
+            height: 170px;
+        }
+
+        .slider img {
+            border: 5px solid #fff;
+            display: block;
+            height: 170px;
+        }
+
+        .slider button {
+            visibility: hidden;
+        }
+
+        .msgbox {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 300px;
+            max-width: 600px;
+            transform: translate(-50%,-50%);
+            z-index: 99999;
+            text-align: center;
+            padding: 15px;
+            border-radius: 3px;
+        }
+
+        .info {
+            color: #ffc152;
+            background-color: #ff;
+            border-color: #d6e9c6;
+        }
+
+        .error {
+            color: #a94442;
+            background-color: #f2dede;
+            border-color: #ebccd1;
+        }
+    </style>
+
+    <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/slick-carousel/1.6.0/slick.min.js"></script>
+    <script type="text/javascript" src="https://cdn.bootcdn.net/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+    <script type="text/javascript">
+        const DOUBAN_TAGS = ["电影", "电视剧", "动漫"];
+        const DOUBAN_URL = 'https://movie.douban.com/j/new_search_subjects?range=0,10&start=0&tags={0}&countries=&sort=U&year_range=2021,2021';
+        const DOUBAN_DETAIL_URL = 'web://https://movie.douban.com/subject/';
+        const HAIKUO_SEARCH_URL = 'hiker://search?s=';
+        const MAX_SLIDER_SIZE = 20; // 最大图片显示张数
+        const PLAY_SPEED = 3000; // 播放速度
+        const PRESS_EVENT_TIMER = 1000; // 长按事件毫秒数
+        const CACHE_TIMEOUT = 60 * 60 * 1000; // 缓存超时时间
+        const SHAKE_THRESHOLD = 1800; // 摇一摇 摇动幅度
+        const SHAKE_TIMES = 4; // 摇一摇 摇动次数
+        const SHAKE_TIMER = 100; // 摇一摇 摇动检测间隔
+        const SHAKE_CLEAR_TIMER = 500; // 摇一摇 摇动数据清空间隔
+        const SHAKE_SLIDER_CHANGE_TXT = '滚屏切换中'; // 摇一摇切换文字
+
+        let timeOutEvent = 0;
+        let lastUpdate = 0;
+        let x = y = z = lastX = lastY = lastZ = 0;
+        let currentTagIdx = 0;
+        let shakeTimes = 0;
+
+        let showInfoMsg = (msg, timeout) => {
+            $('.msgbox').html(msg).addClass('info').show().delay(timeout).fadeOut();
+        };
+
+        let showErrorMsg = (msg, timeout) => {
+            $('.msgbox').html(msg).addClass('error').show().delay(timeout).fadeOut();
+        };
+
+        // 点击
+        let imgClick = (title) => {
+            location.href = HAIKUO_SEARCH_URL + title;
+        };
+
+        // 长按
+        let imgTouch = (id) => {
+            location.href = DOUBAN_DETAIL_URL + id;
+        };
+
+        let getCache = () => {
+            let cache = localStorage.getItem("DOUBAN_CACHE")
+            if (cache) {
+                let cacheArray = JSON.parse(cache);
+                return Array.isArray(cacheArray) ? cacheArray : null;
+            } else {
+                return null;
+            }
+        };
+
+        let readFromDouban = (url, callback) => {
+            $.get(url)
+                .done((data) => {
+                    if (!data.data) callback();
+
+                    let cache = getCache();
+                    if (!cache) cache = [];
+
+                    cache[currentTagIdx] = { time: new Date().getTime(), data: data };
+                    localStorage.setItem('DOUBAN_CACHE', JSON.stringify(cache));
+                    callback();
+                })
+                .fail(() => {
+                    callback();
+                });
+        };
+
+        let getDoubanData = (processDataCallback) => {
+            let cache = getCache();
+            let now = new Date().getTime();
+            let doCallback = () => {
+                cache = getCache();
+                processDataCallback((cache && cache[currentTagIdx]) ? cache[currentTagIdx].data : null);
+            };
+
+            if (!cache || !cache[currentTagIdx] || now > cache[currentTagIdx].time + CACHE_TIMEOUT) {
+                let url = DOUBAN_URL.replace("{0}", DOUBAN_TAGS[currentTagIdx]);
+                readFromDouban(url, () => {
+                    doCallback();
+                });
+            } else {
+                doCallback();
+            }
+        };
+
+        let processData = (data) => {
+            if (!data && !data.data) {
+                showErrorMsg('出錯啦！', 5000);
+                return;
+            }
+
+            for (let i = 0; i < MAX_SLIDER_SIZE && data.data.length > i; i++) {
+                let image = $('<img>').attr('src', data.data[i].cover);
+                image.on('touchstart', () => {
+                    timeOutEvent = setTimeout(() => {
+                        timeOutEvent = 0;
+                        // 长按事件
+                        imgTouch(data.data[i].id);
+                    }, PRESS_EVENT_TIMER);
+                });
+
+                image.on('touchmove', () => {
+                    clearTimeout(timeOutEvent);
+                    timeOutEvent = 0;
+                });
+
+                image.on('touchend', () => {
+                    clearTimeout(timeOutEvent);
+                    if (timeOutEvent != 0) {
+                        // 点击事件
+                        imgClick(data.data[i].title);
+                    }
+                });
+
+                $('.slider').append(image);
+            }
+
+            $('.slider').slick({
+                lazyLoad: 'ondemand',
+                autoplaySpeed: PLAY_SPEED,
+                slidesToShow: 3,
+                autoplay: true,
+                slidesToScroll: 1,
+                pauseOnFocus: false,
+                pauseOnHover: false,
+                pauseOnDotsHover: false
+            });
+        };
+
+        // 摇一摇
+        deviceShaking = () => {
+            currentTagIdx++;
+            if (currentTagIdx >= DOUBAN_TAGS.length) currentTagIdx = 0;
+
+            showInfoMsg("当前分类: " + DOUBAN_TAGS[currentTagIdx], 1000);
+            $('.slider').html('').removeClass().addClass('slider');
+
+            getDoubanData((data) => {
+                processData(data);
+            });
+        };
+
+        let deviceMotionHandler = (e) => {
+            let acceleration = e.accelerationIncludingGravity;
+            let curTime = new Date().getTime();
+
+            if ((curTime - lastUpdate) > SHAKE_TIMER) {
+                let diffTime = curTime - lastUpdate;
+                lastUpdate = curTime;
+                x = acceleration.x;
+                y = acceleration.y;
+                z = acceleration.z;
+                let speed = Math.abs(x + y + z - lastX - lastY - lastZ) / diffTime * 10000;
+                if (speed > SHAKE_THRESHOLD) {
+                    shakeTimes++;
+
+                    if (shakeTimes >= SHAKE_TIMES) {
+                        shakeTimes = 0;
+                        // 摇一摇事件
+                        deviceShaking();
+                    }
+                } else if (curTime - lastUpdate > SHAKE_CLEAR_TIMER) {
+                    shakeTimes = 0;
+                }
+
+                lastX = x;
+                lastY = y;
+                lastZ = z;
+            }
+        };
+
+        $(document).ready(() => {
+            getDoubanData((data) => {
+                processData(data);
+
+                // 添加传感器监听
+                if (window.DeviceMotionEvent) {
+                    window.addEventListener('devicemotion', deviceMotionHandler, false);
+                } else {
+                    showErrorMsg('您的设备不支持摇一摇', 3000);
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="msgbox"></div>
+    <div class="slider"></div>
+</body>
+</html>
