@@ -1,3 +1,10 @@
 version:1
-m.ku6.com::body&&.kankan_logo&&img@@body&&.kankan_logo&&img
-m.baofeng.com::#appview&&.download-details&&.download-con&&h2&&a@@#videoplayer&&.download-app@@body&&.movie-info-box&&.plot-info-box&&.plot-info-part&&p,2@@#appview&&.download-details&&.download-con&&h2&&a@@#videoplayer&&.download-app@@body&&.movie-info-box&&.plot-info-box&&.plot-info-part&&p,2
+www.pianba.tv::body&&.container,0&&.row,0&&.stui-pannel,0&&.stui-pannel-box,0&&.stui-pannel__bd,0&&.stui-content,0&&.vod-gd,0@@body&&.container,0&&.row,0&&.stui-pannel,0&&.stui-pannel__bd,0&&.stui-player,0&&.stui-player__left,0&&.vod-gd,0
+www.yingketuan.com::aueo
+ddrk.me::#fkasjgf&&span,0
+app.movie::body&&.container,0&&.row,0&&.playbtn,0
+www.cupfox.com::#page-wrap&&.mobile-container,0&&.mobile-main,0&&.banner-box,0&&a,0&&.banner-img,0@@#page-wrap&&.mobile-container,0&&.mobile-main,0&&.head-promotion,0@@#page-wrap&&.mobile-container,0&&.mobile-main,0&&.card,1&&.card-content,0&&.banner-box,0&&a,0@@#page-wrap&&.mobile-container,0&&.mobile-main,0&&.card,0
+m.bilibili.com::#app&&.video,0&&.m-video-new,0&&.launch-app-btn,0&&.m-video2-main-img,0
+dyxs14.com::#chuanqi@@body&&.phone,0
+baijiahao.baidu.com::[class^='_']@@#page_wrapper&&div,0&&[class$='-mc']
+blog.csdn.net::body&&.weixin-shadowbox,0
