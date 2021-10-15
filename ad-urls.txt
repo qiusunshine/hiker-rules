@@ -1,4 +1,7 @@
 version:2
+admin.dykj.site
+wenhairu.com
+www.xiaoges.com
 img.alicdn.com@domain=www.baike567.com
 www.haocai1688.com@domain=www.xing04.xyz
 jiuyuntian3.cn
