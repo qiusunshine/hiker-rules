@@ -1,4 +1,5 @@
 version:1
+www.xiaohaitv.com::#imgad
 www.pianba.tv::body&&.container,0&&.row,0&&.stui-pannel,0&&.stui-pannel-box,0&&.stui-pannel__bd,0&&.stui-content,0&&.vod-gd,0@@body&&.container,0&&.row,0&&.stui-pannel,0&&.stui-pannel__bd,0&&.stui-player,0&&.stui-player__left,0&&.vod-gd,0
 www.yingketuan.com::aueo
 ddrk.me::#fkasjgf&&span,0
