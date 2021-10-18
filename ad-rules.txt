@@ -1,4 +1,8 @@
 version:1
+www.77diany.com::body&&div,15
+saohuotv.com::body&&.grid_box,0
+www.5180s.com::body&&.fed-main-info,0&&.fed-part-case,0&&.fed-tabs-info,0&&a,0
+www.o8tv.com::#player-sidebar&&.myui-panel,0&&.myui-panel-box,0&&.col-pd,0&&.col-pd,0
 www.xiaohaitv.com::#imgad
 www.pianba.tv::body&&.container,0&&.row,0&&.stui-pannel,0&&.stui-pannel-box,0&&.stui-pannel__bd,0&&.stui-content,0&&.vod-gd,0@@body&&.container,0&&.row,0&&.stui-pannel,0&&.stui-pannel__bd,0&&.stui-player,0&&.stui-player__left,0&&.vod-gd,0
 www.yingketuan.com::aueo
