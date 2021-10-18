@@ -1,4 +1,11 @@
 version:2
+.jd.com@domain=www.77diany.com
+58cdn.com.cn@domain=www.77diany.com
+nccp.yncjsc.cn
+ef.mr7yhpl.cn
+we.nuofang.top
+qaq.lm665.com
+cdn.rcpuierp.cn
 admin.dykj.site
 wenhairu.com
 www.xiaoges.com
