@@ -1,4 +1,10 @@
 version:2
+golf.hcvhhj.cc
+px.loverzhou.club
+hm.baidu.com@domain=wap.9txs.cc
+native.aiyalife365.cn
+img.liuliangkongjian.cn@domain=wap.9txs.cc
+cdn.jsdelivr.net@domain=wap.9txs.cc
 .jd.com@domain=www.77diany.com
 58cdn.com.cn@domain=www.77diany.com
 nccp.yncjsc.cn
