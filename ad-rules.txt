@@ -1,4 +1,5 @@
 version:1
+dyxs15.com::#main&&.player-block,0&&.content,0&&.player-info,0&&.player-rm,0
 www.9egood.com::.stui-db@@.vddb_qq
 www.77diany.com::body&&div,15
 saohuotv.com::body&&.grid_box,0
