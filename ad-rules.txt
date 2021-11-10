@@ -1,4 +1,5 @@
 version:1
+www.9egood.com::.stui-db@@.vddb_qq
 www.77diany.com::body&&div,15
 saohuotv.com::body&&.grid_box,0
 www.5180s.com::body&&.fed-main-info,0&&.fed-part-case,0&&.fed-tabs-info,0&&a,0
