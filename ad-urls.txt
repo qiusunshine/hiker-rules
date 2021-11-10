@@ -1,4 +1,16 @@
 version:2
+dagutuliao.com
+p0.pstatp.com
+toutiaoimg.com@domain=www.9egood.com
+bdstatic.com@domain=www.9egood.com
+xunlei.com@domain=www.9egood.com
+open.thunderurl.com
+www.kowqd3.top
+img.alicdn.com@domain=www.9egood.com
+www.qwupoq.com
+hylmxing.com
+m.haoyuntj.com
+etl-xlmc-ssl.xunlei.com
 golf.hcvhhj.cc
 px.loverzhou.club
 hm.baidu.com@domain=wap.9txs.cc
