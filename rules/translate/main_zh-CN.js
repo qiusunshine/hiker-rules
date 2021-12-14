@@ -113,7 +113,7 @@
         }
         if (g._cjlc) g._cjlc(g._pas + g._pah + A);
         else {
-            var C ='https://news.yujianweb.cn/js/translate/element_main.js',
+            var C ='https://cdn.jsdelivr.net/gh/qiusunshine/hiker-rules/rules/translate/element_main.js',
             D = document.createElement("script");
             D.type = "text/javascript";
             D.charset = "UTF-8";
