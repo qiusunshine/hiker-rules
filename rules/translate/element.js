@@ -61,6 +61,6 @@
         c._ps =  'https://news.yujianweb.cn/js/translate/translateelement.css';
         c._puh = 'translate.google.com';
         _loadCss(c._ps);
-        _loadJs('https://news.yujianweb.cn/js/translate/main_zh-CN.js');
+        _loadJs('https://cdn.jsdelivr.net/gh/qiusunshine/hiker-rules/rules/translate/main_zh-CN.js');
     })();
 })();
