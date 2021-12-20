@@ -113,7 +113,7 @@
         }
         if (g._cjlc) g._cjlc(g._pas + g._pah + A);
         else {
-            var C ='https://hiker-view.netlify.app/rules/translate/element_main.js',
+            var C ='./element_main.js',
             D = document.createElement("script");
             D.type = "text/javascript";
             D.charset = "UTF-8";
