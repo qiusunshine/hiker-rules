@@ -113,7 +113,7 @@
         }
         if (g._cjlc) g._cjlc(g._pas + g._pah + A);
         else {
-            var C ='./element_main.js',
+            var C ='https://raw.fastgit.org/qiusunshine/hiker-rules/master/rules/translate/element_main.js',
             D = document.createElement("script");
             D.type = "text/javascript";
             D.charset = "UTF-8";
