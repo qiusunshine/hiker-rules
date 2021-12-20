@@ -58,9 +58,9 @@
         c._pli = b + '/translate_static/img/loading.gif';
         c._plla = h + '/translate_a/l';
         c._pmi = b + '/translate_static/img/mini_google.png';
-        c._ps =  './translateelement.css';
+        c._ps =  'https://raw.fastgit.org/qiusunshine/hiker-rules/master/rules/translate/translateelement.css';
         c._puh = 'translate.google.com';
         _loadCss(c._ps);
-        _loadJs('./main_zh-CN.js');
+        _loadJs('https://raw.fastgit.org/qiusunshine/hiker-rules/master/rules/translate/main_zh-CN.js');
     })();
 })();
