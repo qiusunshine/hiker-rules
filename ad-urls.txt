@@ -1,4 +1,10 @@
 version:2
+www.antailianmeng.com
+.360buyimg.com@domain=app.movie
+www.govhebie.cn
+lupic.cdn.bcebos.com
+js.njupt-sacc.com
+img.wxtv.net
 yyds.0310cn.com
 wss.haoyundm.com
 1823411.com
