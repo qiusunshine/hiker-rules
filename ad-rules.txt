@@ -1,4 +1,11 @@
 version:1
+www.4ltv.com::#note@@#main&&.player-block,0&&.content,0&&.player-info,0&&.adwap,0
+www.ysgc.cc::#layui-layer-shade1@@#layui-layer1@@body&&.playtop,0
+www.libvio.com::body&&.container,0&&.none,0&&a,0@@body&&.container,0&&.row,0&&.stui-pannel,0&&.stui-pannel__hd,0&&.none,0@@body&&.inner-advertise,0
+www.niumatv.com::#globalAd@@body&&.layer,0
+www.6yit.com::body&&.container,1&&.content-wrap,0&&.content-layout,0&&.article,0&&.article-content,0&&script,0
+gcsp.lanzoui.com::body&&div,3&&div,0@@body&&.mb,0&&div,7
+tool.liumingye.cn::#music_tool
 555dy.fun::body&&.playtop,0@@#player-left&&.playtop,0
 www.dikotv.com::#note
 dyxs15.com::#dy_card_dy@@body&&.shortcuts-mobile-overlay,0@@body&&.popup,0@@#main&&.player-block,0&&.content,0&&.player-info,0&&.player-rm,0
