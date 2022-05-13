@@ -1,4 +1,13 @@
 version:1
+www.bt-tt.com::body&&.m-pic1,0&&a,0&&img,0
+m.tvmao.com::body&&.body_container,0&&.bg_deepgray,1&&div,4
+www.sopoe.cn::body&&.container,0&&.left_row,0&&.gggg,0@@#bofy&&.pannel_head,0&&.gggg,0&&img,0
+www.szjjzs.com::body&&.head_adv,0@@body&&.foot_adv,0@@body&&.hengf_adv,0&&ul,0
+myqqjd.com::body&&div[class*='-blackout']@@body&&div:contains('关闭广告过滤插件，或将本站添加为白名单')
+cupfox.app::#page-wrap&&.client-download-bar,0
+www.lxapk.com::body&&.container,1&&.content-wrap,0&&.content-layout,0&&.article,0&&.article-content,0&&.wp-block-image,0@@body&&.container,1&&.content-wrap,0&&.content-layout,0&&.article,0&&.article-content,0&&.adsbygoogle,0@@body&&.container,1&&.content-wrap,0&&.content-layout,0&&.article,0&&.article-content,0&&.theme-box,0&&.adsbygoogle,0@@body&&.container,0&&.widget_text,0
+www.dandanzan.top::#UHXBw_1_1@@uhxbw
+qyl733.com::#f_f&&.f_pic,0@@body&&.container,0&&.content,2&&.block-video,0&&.video-holder,0&&a,0@@body&&.content,0&&.container,0&&center,0@@body&&.container,0&&.content,1&&center,0
 www.4ltv.com::#note@@#main&&.player-block,0&&.content,0&&.player-info,0&&.adwap,0
 www.ysgc.cc::#layui-layer-shade1@@#layui-layer1@@body&&.playtop,0
 www.libvio.com::body&&.container,0&&.none,0&&a,0@@body&&.container,0&&.row,0&&.stui-pannel,0&&.stui-pannel__hd,0&&.none,0@@body&&.inner-advertise,0
@@ -18,9 +27,7 @@ www.xiaohaitv.com::#imgad
 www.pianba.tv::body&&.container,0&&.row,0&&.stui-pannel,0&&.stui-pannel-box,0&&.stui-pannel__bd,0&&.stui-content,0&&.vod-gd,0@@body&&.container,0&&.row,0&&.stui-pannel,0&&.stui-pannel__bd,0&&.stui-player,0&&.stui-player__left,0&&.vod-gd,0
 www.yingketuan.com::aueo@@#SYIHRIJXHD
 ddrk.me::#fkasjgf&&span,0
-app.movie::body&&.container,0&&.row,0&&.playbtn,0@@body&&div,4
+app.movie::body&&.container,0&&.row,0&&.playbtn,0@@body&&div,4@@body&&brde
 www.cupfox.com::#page-wrap&&.mobile-container,0&&.mobile-main,0&&.banner-box,0&&a,0&&.banner-img,0@@#page-wrap&&.mobile-container,0&&.mobile-main,0&&.head-promotion,0@@#page-wrap&&.mobile-container,0&&.mobile-main,0&&.card,1&&.card-content,0&&.banner-box,0&&a,0@@#page-wrap&&.mobile-container,0&&.mobile-main,0&&.card,0@@#page-wrap&&.client-download-bar,0@@#page-wrap&&.client-download-button,0
-m.bilibili.com::#app&&.video,0&&.m-video-new,0&&.launch-app-btn,0&&.m-video2-main-img,0
 dyxs14.com::#chuanqi@@body&&.phone,0
 baijiahao.baidu.com::[class^='_']@@#page_wrapper&&div,0&&[class$='-mc']
-blog.csdn.net::body&&.weixin-shadowbox,0
