@@ -13,7 +13,6 @@ m.tvmao.com::body&&.body_container,0&&.bg_deepgray,1&&div,4
 www.sopoe.cn::body&&.container,0&&.left_row,0&&.gggg,0@@#bofy&&.pannel_head,0&&.gggg,0&&img,0
 www.szjjzs.com::body&&.head_adv,0@@body&&.foot_adv,0@@body&&.hengf_adv,0&&ul,0
 myqqjd.com::body&&div[class*='-blackout']@@body&&div:contains('关闭广告过滤插件，或将本站添加为白名单')
-cupfox.app::#page-wrap&&.client-download-bar,0@@#page-wrap&&.mobile-container,0&&.mobile-main,0&&.banner-box,0@@#page-wrap&&.mobile-container,0&&.mobile-main,0&&.card,2&&.card-content,0&&.banner-box,0
 www.lxapk.com::body&&.container,1&&.content-wrap,0&&.content-layout,0&&.article,0&&.article-content,0&&.wp-block-image,0@@body&&.container,1&&.content-wrap,0&&.content-layout,0&&.article,0&&.article-content,0&&.adsbygoogle,0@@body&&.container,1&&.content-wrap,0&&.content-layout,0&&.article,0&&.article-content,0&&.theme-box,0&&.adsbygoogle,0@@body&&.container,0&&.widget_text,0
 www.dandanzan.top::#UHXBw_1_1@@uhxbw
 qyl733.com::#f_f&&.f_pic,0@@body&&.container,0&&.content,2&&.block-video,0&&.video-holder,0&&a,0@@body&&.content,0&&.container,0&&center,0@@body&&.container,0&&.content,1&&center,0
