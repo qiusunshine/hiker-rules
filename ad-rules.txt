@@ -1,4 +1,5 @@
 version:1
+www.pbpb.tv::body&&.a-loading,0
 www.wyxdy.cn::body&&.container,0&&.pannel,0&&.ads,0@@#play_page&&.container,0&&.left_row,0&&.pannel,0&&.ads,0@@body&&.container,0&&.left_row,0&&.pannel,2&&.ads,0@@#play_page&&.play_boxbg,0&&.container,0&&.pannel,0&&.ads,0
 m.kisssub.org::body&&.main,0&&.gg-full-width,0
 www.bdys01.com::#related@@body&&.container-xl,0&&.row,0&&.container,0
