@@ -1,7 +1,15 @@
 version:2
+ads@domain=dyxs21.com
+github@domain=dyxs21.com
+jsdelivr@domain=dyxs21.com
+.gif@domain=dyxs21.com
+poweredby.jads.co
+p432.ssl.qhimgs4.com/*.gif
+adservice.google.com
+pagead2.googlesyndication.com
+googleads@domain=www.yxssp.com
 360buyimg.com@domain=www.dianyingn.com
 4sexmail.com
-dyxs21.com/*recommend*.gif
 yqakcdg.cn
 cdjvd.com
 1.15.59.209
@@ -252,7 +260,6 @@ anwftp.yzyxdw.net
 kz.zmgod.com
 kl.mieyisi.com
 bbs.8023ak.cn
-poweredby.jads.co
 api.shjrwh.cn
 js2.battmd168a1.xyz
 js.99tianxin.com
