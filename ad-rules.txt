@@ -1,5 +1,5 @@
 version:1
-dyxs21.com::#rm-float@@#main&&.player-block,0&&.content,0&&.player-info,0&&.player-rm,0
+dyxs21.com::body&&#dy_card_dy@@#main&&.player-block,0&&.content,0&&.player-info,0&&.player-rm,1&&a,1&&img,0@@#main&&.player-block,0&&.content,0&&.player-info,0&&.player-rm,1&&a,0&&img,0@@#main&&.player-block,0&&.content,0&&.player-box,0&&.player-box-main,0&&.player-rm,0&&a,0&&.h5,0@@#main&&.player-block,0&&.content,0&&.player-info,0&&.player-rm,0&&a,0&&.h5,0@@#rm-float&&a,1
 www.31kan.vip::#layui-layer-shade1@@#layui-layer1@@#player-sidebar&&.myui-panel,0&&.myui-panel-box,0&&.tab-content,0&&div,1@@#ad_up2
 www.pbpb.tv::body&&.a-loading,0@@body&&ul,1@@body&&ul,3@@body&&ul,2@@body&&ul,0@@body&&ul,4
 www.wyxdy.cn::body&&.container,0&&.pannel,0&&.ads,0@@#play_page&&.container,0&&.left_row,0&&.pannel,0&&.ads,0@@body&&.container,0&&.left_row,0&&.pannel,2&&.ads,0@@#play_page&&.play_boxbg,0&&.container,0&&.pannel,0&&.ads,0
