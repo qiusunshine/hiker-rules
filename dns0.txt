@@ -1,2 +1,2 @@
-www.01xs.com
+01xs.com https://doh.360.cn/dns-query
 raw.githubusercontent.com https://doh.360.cn/dns-query
