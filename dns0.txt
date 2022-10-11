@@ -1,1 +1,2 @@
 www.01xs.com
+raw.githubusercontent.com https://doh.360.cn/dns-query
