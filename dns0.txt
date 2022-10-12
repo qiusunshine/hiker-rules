@@ -1,3 +1,4 @@
 01xs.com https://doh.360.cn/dns-query
 raw.githubusercontent.com 199.232.68.133 185.199.110.133
 translate.googleapis.com 220.181.174.162
+cmd.im https://doh.360.cn/dns-query
