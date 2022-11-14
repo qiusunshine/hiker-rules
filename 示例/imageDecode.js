@@ -1,5 +1,5 @@
 d.push({
-	img: 'http://1.com/1.jpg@js=' + $.toString(()->{
+	img: 'http://1.com/1.jpg@js=' + $.toString(()=>{
 		let javaImport = new JavaImporter();
 		javaImport.importPackage(
 			Packages.com.example.hikerview.utils
