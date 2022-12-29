@@ -1,4 +1,5 @@
 version:2
+google@domain=pansearch.long2ice.io
 .la/@domain=pansearch.long2ice.io
 /sh/to/@domain=www.qishuxia.com
 .gif@domain=www.qishuxia.com
