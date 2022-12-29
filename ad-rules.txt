@@ -1,4 +1,5 @@
 version:1
+gmtv1.lol::#pc_rb_float@@#full-wrap@@#adwrap@@body&&.full-wrap,0@@body&&.adwrap,0
 dyxs21.com::body&&#dy_card_dy@@#main&&.player-block,0&&.content,0&&.player-info,0&&.player-rm,1&&a,1&&img,0@@#main&&.player-block,0&&.content,0&&.player-info,0&&.player-rm,1&&a,0&&img,0@@#main&&.player-block,0&&.content,0&&.player-box,0&&.player-box-main,0&&.player-rm,0&&a,0&&.h5,0@@#main&&.player-block,0&&.content,0&&.player-info,0&&.player-rm,0&&a,0&&.h5,0@@#rm-float&&a,1
 www.31kan.vip::#layui-layer-shade1@@#layui-layer1@@#player-sidebar&&.myui-panel,0&&.myui-panel-box,0&&.tab-content,0&&div,1@@#ad_up2
 www.pbpb.tv::body&&.a-loading,0@@body&&ul,1@@body&&ul,3@@body&&ul,2@@body&&ul,0@@body&&ul,4
@@ -9,7 +10,7 @@ apk4all.com::#post-wrapper&&.apps,2&&.inside-article,0&&.apk-dl,0
 www.jubaibai.cc::body&&[style*=z-index]@@body&&[style*=bottom]
 qqx14.com::body&&.content,0&&.container,0&&center,0
 qqx15.com::body&&.content,0&&.container,0&&center,0
-m.dmh8.com::body&&nisei,5@@body&&nisei,1@@#ads
+m.dmh8.com::body&&nisei,5@@body&&nisei,1@@#ads@@ul[style*='display']@@body .nhidswxu_b@@ul[style*='display'] li@@ul[style*='display'] a@@body&&.nhidswxu_b@@a[style*='z-index']
 www.tkys.tv::body&&.ayx,0
 www.bt-tt.com::body&&.m-pic1,0&&a,0&&img,0
 m.tvmao.com::body&&.body_container,0&&.bg_deepgray,1&&div,4
