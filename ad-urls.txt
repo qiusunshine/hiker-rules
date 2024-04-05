@@ -476,3 +476,4 @@ hm.baidu.com@domain=dyxs14.com
 www.googletagmanager.com@domain=dyxs14.com
 blockForward@2@domain=www.wxxzzs.com
 blockForward@1@domain=www.xnjxnz.com
+blockForward@1@domain=www.scstly.org
