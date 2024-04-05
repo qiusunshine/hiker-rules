@@ -474,3 +474,5 @@ www.google-analytics.com@domain=dyxs14.com
 ers.baidu.com@domain=dyxs14.com
 hm.baidu.com@domain=dyxs14.com
 www.googletagmanager.com@domain=dyxs14.com
+blockForward@2@domain=www.wxxzzs.com
+blockForward@1@domain=www.xnjxnz.com
