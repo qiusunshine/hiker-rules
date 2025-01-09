@@ -23,3 +23,8 @@
 -*-*-*-*.as^$script,third-party
 -*-*-*-*.panda^$script,third-party
 ||leexdwhx.com^$domain=gomoviestv.to
+||ssnruxrwbc.com
+||count-server.sharethis.com
+||gomoviestv.to/ajax/banner/vpn
+||gomoviestv.to/ajax/banners?page=home
+||l.sharethis.com/pview
