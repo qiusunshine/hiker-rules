@@ -1,27 +1,7 @@
 [Adblock Plus 2.0]
-! Checksum: Hth/vFD/uPK+LCnx/wiAAw
 ! Version: 202501091001
 ! Title: Quan
-! Last modified: 09 Jan 2025 10:01 UTC
 ! Expires: 1 days (update frequency)
-! Homepage: https://github.com/easylist/easylistchina/
-!
-! *** easylistchina.txt ***
-!
-! EasyList China subscription
-!
-! *** easylistchina:easylistchina.txt ***
-! Chinese supplement for the EasyList filters
-! License: https://easylist.to/pages/licence.html
-!
-! Please report any unblocked adverts or problems
-! on GitHub (https://github.com/easylist/easylistchina/issues)
-! or via e-mail (easylist.china@gmail.com).
-!
-!-----------------------General advert blocking filters-----------------------!
--*-*-*-*.alpha^$script,third-party
--*-*-*-*.as^$script,third-party
--*-*-*-*.panda^$script,third-party
 ||leexdwhx.com^$domain=gomoviestv.to
 ||ssnruxrwbc.com
 ||count-server.sharethis.com
