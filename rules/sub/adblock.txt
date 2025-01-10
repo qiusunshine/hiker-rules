@@ -2,6 +2,17 @@
 ! Version: 202501091001
 ! Title: Quan
 ! Expires: 1 days (update frequency)
+gomoviestv.to##body > div[style*="position"][style*="z-index"]
+||foostoug.com
+||tzegilo.com$domain=gomoviestv.to
+||rtmark.net$domain=gomoviestv.to
+||paizowheefash.net$domain=gomoviestv.to
+||sysmeasuring.net$domain=gomoviestv.to
+||rndskittytor.com$domain=gomoviestv.to
+||gomoviestv.to/ajax/banners
+||gomoviestv.to/ajax/banner/vpn
+||sharethis.com$domain=gomoviestv.to
+||fsxmuhrobgch.com$domain=gomoviestv.to
 ||leexdwhx.com^$domain=gomoviestv.to
 ||ssnruxrwbc.com
 ||count-server.sharethis.com
